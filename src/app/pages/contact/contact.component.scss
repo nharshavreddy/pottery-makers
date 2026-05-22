@@ -96,6 +96,11 @@
   padding: 40px;
   border: 1px solid var(--border-light);
 
+  @media (max-width: 576px) {
+    padding: 20px;
+    border-radius: var(--radius-md);
+  }
+
   h3 {
     font-size: 1.4rem;
     color: var(--text-dark);

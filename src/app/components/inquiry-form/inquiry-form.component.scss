@@ -1,6 +1,11 @@
 .inquiry-form-wrapper {
   max-width: 520px;
   margin: 0 auto;
+  width: 100%;
+
+  @media (max-width: 576px) {
+    max-width: 100%;
+  }
 }
 
 .form-card {
@@ -11,7 +16,8 @@
   border: 1px solid var(--border-light);
 
   @media (max-width: 576px) {
-    padding: 24px;
+    padding: 20px;
+    border-radius: var(--radius-md);
   }
 }
 

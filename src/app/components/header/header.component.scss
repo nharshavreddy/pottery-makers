@@ -68,6 +68,10 @@ header {
   font-weight: 700;
   color: var(--text-dark);
   line-height: 1.2;
+
+  @media (max-width: 400px) {
+    font-size: 1rem;
+  }
 }
 
 .logo-tagline {
@@ -183,8 +187,15 @@ header {
   bottom: 0;
   background: rgba(253, 248, 244, 0.98);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   padding: 24px;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  @media (max-width: 480px) {
+    top: 60px;
+    padding: 16px;
+  }
 }
 
 .mobile-nav {

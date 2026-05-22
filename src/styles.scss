@@ -44,6 +44,10 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+
+  @media (max-width: 375px) {
+    font-size: 14px;
+  }
 }
 
 body {
@@ -54,6 +58,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -107,6 +113,10 @@ img {
   @media (max-width: 768px) {
     font-size: 2rem;
   }
+
+  @media (max-width: 480px) {
+    font-size: 1.7rem;
+  }
 }
 
 .section-subtitle {
@@ -114,6 +124,11 @@ img {
   color: var(--text-medium);
   max-width: 600px;
   margin-bottom: 48px;
+
+  @media (max-width: 576px) {
+    font-size: 0.95rem;
+    margin-bottom: 32px;
+  }
 }
 
 .btn {
@@ -127,6 +142,12 @@ img {
   font-weight: 500;
   transition: all var(--transition-smooth);
   letter-spacing: 0.3px;
+
+  @media (max-width: 576px) {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    width: 100%;
+  }
 
   &-primary {
     background: var(--primary-terracotta);
