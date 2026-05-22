@@ -29,16 +29,16 @@
       </button>
     </div>
   </div>
-
-  <div class="mobile-menu" *ngIf="isMobileMenuOpen" @slideDown>
-    <div class="mobile-nav">
-      <a *ngFor="let link of navLinks"
-         (click)="navigate(link.path)"
-         class="mobile-nav-link"
-         routerLinkActive="active">
-        <span class="material-symbols-outlined">{{ link.icon }}</span>
-        <span>{{ link.label }}</span>
-      </a>
-    </div>
-  </div>
 </header>
+
+<div class="mobile-menu" [class.open]="isMobileMenuOpen">
+  <div class="mobile-nav">
+    <a *ngFor="let link of navLinks"
+       (click)="navigate(link.path)"
+       class="mobile-nav-link"
+       routerLinkActive="active">
+      <span class="material-symbols-outlined">{{ link.icon }}</span>
+      <span>{{ link.label }}</span>
+    </a>
+  </div>
+</div>

@@ -1,23 +1,11 @@
 import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from '../../services/cart.service';
-import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
-  animations: [
-    trigger('slideDown', [
-      transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(-10px)' }),
-        animate('300ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
-      ]),
-      transition(':leave', [
-        animate('200ms ease-in', style({ opacity: 0, transform: 'translateY(-10px)' }))
-      ])
-    ])
-  ]
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
   isScrolled = false;

@@ -13,6 +13,7 @@ export class ProductService {
       description: 'A minimalist concrete pot with a smooth matte finish and tapered shape. Durable and modern, perfect for enhancing any indoor or outdoor space.',
       price: 4000,
       setPrice: 'Buy Set of 3 at ₹9,999',
+      image: 'assets/images/concrete/concrete-000.jpg',
       dimensions: [
         { height: '25"', diameter: '22"' },
         { height: '22"', diameter: '19"' },
@@ -25,6 +26,7 @@ export class ProductService {
       description: 'A tall, tapered concrete pot with a sleek conical shape. Modern and elegant, ideal for statement plants.',
       price: 1700,
       setPrice: 'Buy Set of 3 at ₹3,999',
+      image: 'assets/images/concrete/concrete-014.jpg',
       dimensions: [
         { height: '30"', diameter: '17"' },
         { height: '25"', diameter: '17"' },
@@ -37,6 +39,7 @@ export class ProductService {
       description: 'A stylish urn-shaped concrete pot with a soft curved taper. Elegant and sturdy, perfect for adding a classic modern touch.',
       price: 5500,
       setPrice: 'Buy 2 at ₹9,999',
+      image: 'assets/images/concrete/concrete-028.jpg',
       dimensions: [{ height: '36"', diameter: '19"' }]
     },
     {
@@ -45,6 +48,7 @@ export class ProductService {
       description: 'Combines a bold architectural silhouette with raw enduring strength of premium concrete. Clean vertical lines and minimalist industrial finish.',
       price: 5500,
       setPrice: 'Buy Set of 3 at ₹9,999',
+      image: 'assets/images/concrete/concrete-036.jpg',
       dimensions: [
         { height: '30"', diameter: '18"' },
         { height: '24"', diameter: '12"' },
@@ -57,6 +61,7 @@ export class ProductService {
       description: 'Minimalist organic silhouette, a versatile choice for contemporary indoor greenery or modern outdoor landscape accents.',
       price: 16500,
       setPrice: 'Buy 2 at ₹30,000',
+      image: 'assets/images/concrete/concrete-052.jpg',
       dimensions: [{ height: '42"', diameter: '24"' }]
     },
     {
@@ -65,6 +70,7 @@ export class ProductService {
       description: 'Striking hourglass silhouette with textured weathered finish bringing earthy primitive charm. Bold sculptural statement piece.',
       price: 14500,
       setPrice: 'Buy 2 at ₹25,000',
+      image: 'assets/images/concrete/concrete-060.jpg',
       dimensions: [
         { height: '28"', diameter: '32"' },
         { height: '24"', diameter: '28"' }
@@ -76,6 +82,7 @@ export class ProductService {
       description: 'Graceful ovoid silhouette with smooth stone-like texture evoking natural serenity and balance. Ideal for lush foliage.',
       price: 6000,
       setPrice: 'Buy 2 at ₹10,000',
+      image: 'assets/images/concrete/concrete-072.jpg',
       dimensions: [
         { height: '35"', diameter: '18"' },
         { height: '30"', diameter: '16"' }
@@ -87,6 +94,7 @@ export class ProductService {
       description: 'Refined U-shape silhouette with smooth industrial gray finish radiating modern simplicity. Seamless curved base design.',
       price: 3800,
       setPrice: 'Buy Set of 3 at ₹8,500',
+      image: 'assets/images/concrete/concrete-086.jpg',
       dimensions: [
         { height: '28"', diameter: '18"' },
         { height: '25"', diameter: '18"' },
@@ -99,6 +107,7 @@ export class ProductService {
       description: 'Robust broad-shouldered silhouette with hand-finished texture. Timeless architectural presence for grand entryways or gardens.',
       price: 22500,
       setPrice: 'Buy Set of 2 at ₹32,000',
+      image: 'assets/images/concrete/concrete-094.jpg',
       dimensions: [
         { height: '48"', diameter: '33"' },
         { height: '32"', diameter: '25"' }
@@ -110,6 +119,7 @@ export class ProductService {
       description: 'Premium octagonal concrete vessel designed to create a serene aquatic ecosystem for lotus, lilies, and ornamental fish.',
       price: 15000,
       setPrice: 'Buy with full setup @ ₹22,000',
+      image: 'assets/images/concrete/concrete-102.jpg',
       dimensions: [{ height: 'N/A', diameter: '60" (5 Feet)' }]
     },
     {
@@ -117,6 +127,7 @@ export class ProductService {
       category: 'concrete',
       description: 'Transform your outdoor space into a serene aquatic oasis with exquisitely curated self-contained water features.',
       price: 5500,
+      image: 'assets/images/concrete/concrete-122.jpg',
       dimensions: [
         { height: '19"', diameter: '48"' },
         { height: '19"', diameter: '36"' },
@@ -128,6 +139,7 @@ export class ProductService {
       category: 'concrete',
       description: 'Spherical planters with sophisticated blend of smooth off-white and weathered charcoal finishes. Organic hand-finished textures.',
       price: 2500,
+      image: 'assets/images/concrete/concrete-138.jpg',
       dimensions: [
         { height: '18"', diameter: '19"' },
         { height: '24"', diameter: '20"' },
@@ -140,6 +152,7 @@ export class ProductService {
       description: 'Versatile collection of cast concrete pots with clean lines and modern raw finish. Fits seamlessly into urban and natural environments.',
       price: 7000,
       setPrice: 'Buy Set of 4 at ₹18,000',
+      image: 'assets/images/concrete/concrete-156.jpg',
       dimensions: [
         { height: '30"', length: '16"' },
         { height: '30"', length: '13"' },
@@ -151,6 +164,7 @@ export class ProductService {
       category: 'concrete',
       description: 'Minimalist square planter with seamless smooth concrete finish and clean geometric silhouette. Perfect modern accent.',
       price: 4000,
+      image: 'assets/images/concrete/concrete-170.jpg',
       dimensions: [
         { height: '24"', length: '24"' },
         { height: '24"', length: '18.5"' },
@@ -162,6 +176,7 @@ export class ProductService {
       category: 'concrete',
       description: 'Premium rectangular planter with seamless matte concrete finish. Elongated silhouette perfect for lush multi-plant arrangements.',
       price: 12000,
+      image: 'assets/images/concrete/concrete-186.jpg',
       dimensions: [
         { height: '18"', width: '18"', length: '48"' },
         { height: '24"', width: '24"', length: '48"' },
@@ -176,6 +191,7 @@ export class ProductService {
       category: 'terracotta',
       description: 'Elegant tall terracotta designer pot with rich earthy textures and warm colors. Handcrafted with traditional techniques.',
       price: 0,
+      image: 'assets/images/terracotta/terracotta-001.jpg',
       dimensions: [
         { height: '35"', diameter: '9.5"' },
         { height: '30"', diameter: '8.5"' },
@@ -187,6 +203,7 @@ export class ProductService {
       category: 'terracotta',
       description: 'Beautiful wide-body terracotta pot with artistic textures. Perfect for home decor and garden styling.',
       price: 0,
+      image: 'assets/images/terracotta/terracotta-004.jpg',
       dimensions: [
         { height: '30"', diameter: '14"' },
         { height: '28"', diameter: '15"' }
@@ -197,6 +214,7 @@ export class ProductService {
       category: 'terracotta',
       description: 'Artistically textured globe-shaped terracotta pot. Play with textures and colours for unique home decor.',
       price: 0,
+      image: 'assets/images/terracotta/terracotta-006.jpg',
       dimensions: [
         { height: '30"', diameter: '16"' },
         { height: '24"', diameter: '14"' }
@@ -207,6 +225,7 @@ export class ProductService {
       category: 'terracotta',
       description: 'Classic trio terracotta set available in multiple sizes. Timeless design that complements any space.',
       price: 0,
+      image: 'assets/images/terracotta/terracotta-009.jpg',
       dimensions: [
         { height: '35"', diameter: '15"' },
         { height: '30"', diameter: '15"' },
@@ -218,6 +237,7 @@ export class ProductService {
       category: 'terracotta',
       description: 'Tall cylindrical terracotta planter, handcrafted with love. Statement piece for indoor and outdoor spaces.',
       price: 0,
+      image: 'assets/images/terracotta/terracotta-022.jpg',
       dimensions: [
         { height: '48"', diameter: '12"' },
         { height: '36"', diameter: '12"' },
@@ -229,6 +249,7 @@ export class ProductService {
       category: 'terracotta',
       description: 'Classic tapered terracotta design available in graduated sizes. Perfect for creating layered garden displays.',
       price: 0,
+      image: 'assets/images/terracotta/terracotta-025.jpg',
       dimensions: [
         { height: '30"', diameter: '16"' },
         { height: '25"', diameter: '15"' },
@@ -240,6 +261,7 @@ export class ProductService {
       category: 'terracotta',
       description: 'Artisan-crafted terracotta trio with beautiful proportions. Each piece tells a story of traditional craftsmanship.',
       price: 0,
+      image: 'assets/images/terracotta/terracotta-027.jpg',
       dimensions: [
         { height: '36"', diameter: '15"' },
         { height: '25"', diameter: '15"' },
@@ -251,6 +273,7 @@ export class ProductService {
       category: 'terracotta',
       description: 'Charming mini decorative terracotta vase. Perfect for small plants, succulents, or as standalone decor.',
       price: 0,
+      image: 'assets/images/terracotta/terracotta-017.jpg',
       dimensions: [{ height: '17"', diameter: '7"' }]
     },
     {
@@ -258,6 +281,7 @@ export class ProductService {
       category: 'terracotta',
       description: 'Heritage collection featuring traditional terracotta designs with modern appeal. Available in three sizes.',
       price: 0,
+      image: 'assets/images/terracotta/terracotta-042.jpg',
       dimensions: [
         { height: '36"', diameter: '15"' },
         { height: '25"', diameter: '15"' },

@@ -1,6 +1,7 @@
 <div class="product-card" [class]="'product-card theme-' + themeColor">
   <div class="card-image">
-    <div class="image-placeholder">
+    <img *ngIf="product.image" [src]="product.image" [alt]="product.name" loading="lazy">
+    <div class="image-placeholder" *ngIf="!product.image">
       <span class="material-symbols-outlined">potted_plant</span>
     </div>
     <div class="card-badge" *ngIf="product.setPrice">

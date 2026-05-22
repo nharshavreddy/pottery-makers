@@ -9,6 +9,7 @@ header {
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid transparent;
   transition: all var(--transition-smooth);
+  overflow: visible;
 
   &.scrolled {
     background: rgba(255, 255, 255, 0.95);
@@ -157,44 +158,63 @@ header {
 
 .mobile-toggle {
   display: none;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: transparent;
   align-items: center;
   justify-content: center;
   transition: all var(--transition-fast);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 
   @media (max-width: 1100px) {
     display: flex;
   }
 
-  &:hover {
+  &:hover, &:active {
     background: rgba(199, 91, 57, 0.08);
   }
 
   .material-symbols-outlined {
-    font-size: 24px;
+    font-size: 26px;
     color: var(--text-dark);
   }
 }
 
 .mobile-menu {
   position: fixed;
-  top: 72px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(253, 248, 244, 0.98);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  padding: 24px;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: var(--bg-cream);
+  padding: 90px 24px 24px;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
 
   @media (max-width: 480px) {
-    top: 60px;
-    padding: 16px;
+    padding: 80px 16px 16px;
+  }
+
+  @media (min-width: 1101px) {
+    display: none !important;
   }
 }
 
@@ -210,18 +230,22 @@ header {
   gap: 16px;
   padding: 16px 20px;
   border-radius: var(--radius-md);
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 500;
   color: var(--text-medium);
   transition: all var(--transition-fast);
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
 
   .material-symbols-outlined {
     font-size: 22px;
     color: var(--text-light);
+    flex-shrink: 0;
   }
 
-  &:hover, &.active {
+  &:hover, &:active, &.active {
     background: rgba(199, 91, 57, 0.08);
     color: var(--primary-terracotta);
 
