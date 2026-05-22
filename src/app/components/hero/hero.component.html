@@ -1,0 +1,14 @@
+<section class="hero" [class]="'hero hero--' + backgroundClass" [class.hero--compact]="compact">
+  <div class="hero-overlay"></div>
+  <div class="hero-particles">
+    <div class="particle" *ngFor="let i of [1,2,3,4,5,6]"></div>
+  </div>
+  <div class="hero-content">
+    <h1 class="hero-title">{{ title }}</h1>
+    <p class="hero-subtitle">{{ subtitle }}</p>
+    <a *ngIf="showCta" [routerLink]="ctaLink" class="btn btn-primary hero-cta">
+      {{ ctaText }}
+      <span class="material-symbols-outlined">arrow_forward</span>
+    </a>
+  </div>
+</section>

@@ -1,0 +1,138 @@
+<!-- Hero Section -->
+<section class="home-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-particles">
+    <div class="particle" *ngFor="let i of [1,2,3,4,5,6,7,8]"></div>
+  </div>
+  <div class="hero-content">
+    <span class="hero-badge">Handcrafted Since Generations</span>
+    <h1 class="hero-title">The Art of<br><span class="highlight">Pottery Making</span></h1>
+    <p class="hero-subtitle">
+      Where tradition meets modern design. Discover our curated collection of
+      handcrafted terracotta, concrete, and designer pots.
+    </p>
+    <div class="hero-actions">
+      <a routerLink="/concrete" class="btn btn-primary">
+        Explore Collection
+        <span class="material-symbols-outlined">arrow_forward</span>
+      </a>
+      <a routerLink="/about" class="btn btn-outline btn-light">
+        Our Story
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-number">200+</span>
+        <span class="stat-label">Unique Designs</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">50+</span>
+        <span class="stat-label">Product Variants</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">7</span>
+        <span class="stat-label">Categories</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Categories Section -->
+<section class="categories-section section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Our Collections</span>
+      <h2 class="section-title">Explore Our Categories</h2>
+      <p class="section-subtitle">
+        From earthy terracotta to sleek concrete, find the perfect pot for every space
+      </p>
+    </div>
+
+    <div class="categories-grid">
+      <a *ngFor="let cat of categories; let i = index"
+         [routerLink]="cat.route"
+         class="category-card"
+         [style.animation-delay]="(i * 100) + 'ms'">
+        <div class="card-gradient" [style.background]="cat.gradient"></div>
+        <div class="card-content">
+          <span class="material-symbols-outlined card-icon">{{ cat.icon }}</span>
+          <h3>{{ cat.name }}</h3>
+          <p>{{ cat.description }}</p>
+          <span class="card-arrow material-symbols-outlined">arrow_forward</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-card" *ngFor="let feat of features">
+        <div class="feature-icon">
+          <span class="material-symbols-outlined">{{ feat.icon }}</span>
+        </div>
+        <h4>{{ feat.title }}</h4>
+        <p>{{ feat.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Preview Section -->
+<section class="about-preview section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image">
+        <div class="image-placeholder">
+          <span class="material-symbols-outlined">yard</span>
+        </div>
+        <div class="floating-badge">
+          <span class="material-symbols-outlined">workspace_premium</span>
+          <span>Premium<br>Quality</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="section-tag">About Us</span>
+        <h2 class="section-title">Crafted with Passion,<br>Delivered with Care</h2>
+        <p>
+          At The Pottery Makers, we specialize in crafting high-quality pots that blend
+          tradition with modern design. Our collection includes terracotta, concrete,
+          traditional, elite, and textured pots, carefully designed to enhance both
+          indoor and outdoor spaces.
+        </p>
+        <p>
+          With a strong focus on craftsmanship and authenticity, we also offer landscaping
+          solutions and pottery classes for those who wish to explore the art of pottery.
+        </p>
+        <a routerLink="/about" class="btn btn-outline">
+          Learn More About Us
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-card">
+      <div class="cta-content">
+        <h2>Ready to Transform Your Space?</h2>
+        <p>Browse our collection or reach out for a personalized consultation</p>
+        <div class="cta-actions">
+          <a routerLink="/contact" class="btn btn-primary">
+            Get in Touch
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+          <a href="https://wa.me/917396288015" target="_blank" class="btn btn-whatsapp">
+            <span class="material-symbols-outlined">chat</span>
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

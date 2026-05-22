@@ -1,0 +1,48 @@
+<div class="product-card" [class]="'product-card theme-' + themeColor">
+  <div class="card-image">
+    <div class="image-placeholder">
+      <span class="material-symbols-outlined">potted_plant</span>
+    </div>
+    <div class="card-badge" *ngIf="product.setPrice">
+      <span>{{ product.setPrice }}</span>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="card-header">
+      <span class="product-code">{{ product.code }}</span>
+      <h3 class="product-name">{{ product.name }}</h3>
+    </div>
+
+    <p class="product-desc">{{ product.description }}</p>
+
+    <div class="dimensions">
+      <div class="dim-item" *ngFor="let dim of product.dimensions; let i = index">
+        <span class="dim-label">Size {{ i + 1 }}</span>
+        <span class="dim-value">H: {{ dim.height }} <span *ngIf="dim.diameter">| D: {{ dim.diameter }}</span><span *ngIf="dim.length">| L: {{ dim.length }}</span></span>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <div class="price" *ngIf="product.price > 0">
+        <span class="price-symbol">&#8377;</span>
+        <span class="price-value">{{ product.price | number }}</span>
+        <span class="price-suffix">/-</span>
+      </div>
+      <div class="price price-inquiry" *ngIf="product.price === 0">
+        <span>Price on Inquiry</span>
+      </div>
+
+      <div class="quantity-actions">
+        <div class="quantity-control">
+          <button (click)="decrementQuantity()" class="qty-btn">-</button>
+          <span class="qty-value">{{ quantity }}</span>
+          <button (click)="incrementQuantity()" class="qty-btn">+</button>
+        </div>
+        <button class="add-btn" (click)="onAddToInquiry()">
+          <span class="material-symbols-outlined">add_shopping_cart</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+<app-hero
+  title="Pottery Classes"
+  subtitle="Discover the therapeutic art of pottery making. Shape clay, shape memories. Join our hands-on workshops."
+  backgroundClass="classes"
+  [compact]="true">
+</app-hero>
+
+<section class="classes-section section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Learn & Create</span>
+      <h2 class="section-title">Hands-on Pottery Experience</h2>
+      <p class="section-subtitle">
+        Whether you're a complete beginner or looking to refine your skills, our classes offer something for everyone
+      </p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card" *ngFor="let feat of classFeatures">
+        <div class="feature-icon">
+          <span class="material-symbols-outlined">{{ feat.icon }}</span>
+        </div>
+        <h4>{{ feat.title }}</h4>
+        <p>{{ feat.desc }}</p>
+      </div>
+    </div>
+
+    <div class="class-info">
+      <div class="info-card">
+        <h3>What You'll Learn</h3>
+        <ul>
+          <li>
+            <span class="material-symbols-outlined">check_circle</span>
+            Clay preparation and wedging techniques
+          </li>
+          <li>
+            <span class="material-symbols-outlined">check_circle</span>
+            Wheel throwing fundamentals
+          </li>
+          <li>
+            <span class="material-symbols-outlined">check_circle</span>
+            Hand building — coiling, slab, and pinch methods
+          </li>
+          <li>
+            <span class="material-symbols-outlined">check_circle</span>
+            Surface decoration and texturing
+          </li>
+          <li>
+            <span class="material-symbols-outlined">check_circle</span>
+            Glazing and finishing techniques
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="registration-cta" *ngIf="!showRegistration">
+      <h3>Ready to Get Your Hands Dirty?</h3>
+      <p>Register for our next pottery class and start your creative journey</p>
+      <button class="btn btn-primary" (click)="toggleRegistration()">
+        <span class="material-symbols-outlined">school</span>
+        Register Now
+      </button>
+    </div>
+
+    <div class="registration-section" *ngIf="showRegistration">
+      <app-inquiry-form
+        formType="class"
+        themeColor="terracotta"
+        (formSubmitted)="onFormSubmitted()">
+      </app-inquiry-form>
+    </div>
+  </div>
+</section>

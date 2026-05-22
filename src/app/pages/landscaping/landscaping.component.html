@@ -1,0 +1,39 @@
+<app-hero
+  title="Landscaping Solutions"
+  subtitle="Complete outdoor transformation with our curated landscaping packages. Let nature and design come together."
+  backgroundClass="landscaping"
+  [compact]="true">
+</app-hero>
+
+<section class="products-section section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Outdoor Transformations</span>
+      <h2 class="section-title">Landscaping Packages</h2>
+      <p class="section-subtitle">
+        Comprehensive landscaping solutions tailored to your space — from intimate gardens to grand landscapes
+      </p>
+    </div>
+
+    <div class="products-grid">
+      <app-product-card
+        *ngFor="let product of products"
+        [product]="product"
+        [themeColor]="'landscaping'"
+        (addToInquiry)="addToInquiry($event)">
+      </app-product-card>
+    </div>
+
+    <div class="inquiry-cta" *ngIf="!showInquiryForm">
+      <button class="btn btn-primary" (click)="toggleInquiryForm()">
+        <span class="material-symbols-outlined">park</span>
+        Get a Quote
+      </button>
+      <p class="cta-note">Tell us about your space and we'll design the perfect solution</p>
+    </div>
+
+    <div class="inquiry-section" *ngIf="showInquiryForm">
+      <app-inquiry-form formType="inquiry" themeColor="landscaping" (formSubmitted)="onFormSubmitted()"></app-inquiry-form>
+    </div>
+  </div>
+</section>

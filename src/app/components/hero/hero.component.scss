@@ -1,0 +1,146 @@
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 120px 24px 80px;
+
+  &--compact {
+    min-height: 45vh;
+    padding: 140px 24px 60px;
+  }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+
+  .particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    animation: float 8s ease-in-out infinite;
+
+    &:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+    &:nth-child(2) { left: 30%; top: 60%; animation-delay: 1.5s; width: 4px; height: 4px; }
+    &:nth-child(3) { left: 60%; top: 30%; animation-delay: 3s; width: 8px; height: 8px; }
+    &:nth-child(4) { left: 80%; top: 70%; animation-delay: 4.5s; }
+    &:nth-child(5) { left: 50%; top: 80%; animation-delay: 2s; width: 5px; height: 5px; }
+    &:nth-child(6) { left: 90%; top: 40%; animation-delay: 5.5s; width: 3px; height: 3px; }
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
+  50% { transform: translateY(-30px) rotate(180deg); opacity: 0.8; }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+.hero-cta {
+  font-size: 1rem;
+  padding: 16px 36px;
+}
+
+// Category-based color themes
+.hero--default {
+  background: linear-gradient(135deg, #C75B39 0%, #8B3A25 50%, #5C2518 100%);
+
+  .particle { background: rgba(232, 168, 145, 0.4); }
+}
+
+.hero--terracotta {
+  background: linear-gradient(135deg, #C75B39 0%, #A0442D 40%, #6B2E1E 100%);
+
+  .particle { background: rgba(255, 180, 150, 0.4); }
+}
+
+.hero--concrete {
+  background: linear-gradient(135deg, #6B7B8F 0%, #4A5B6B 40%, #2C3A47 100%);
+
+  .particle { background: rgba(168, 181, 194, 0.4); }
+}
+
+.hero--traditional {
+  background: linear-gradient(135deg, #8B6914 0%, #6B4F0E 40%, #3D2D08 100%);
+
+  .particle { background: rgba(212, 168, 67, 0.4); }
+}
+
+.hero--elite {
+  background: linear-gradient(135deg, #4A6741 0%, #365032 40%, #1E3020 100%);
+
+  .particle { background: rgba(123, 163, 112, 0.4); }
+}
+
+.hero--textured {
+  background: linear-gradient(135deg, #7B5E3B 0%, #5C452B 40%, #3B2C1B 100%);
+
+  .particle { background: rgba(184, 149, 107, 0.4); }
+}
+
+.hero--landscaping {
+  background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 40%, #0D3B0F 100%);
+
+  .particle { background: rgba(102, 187, 106, 0.4); }
+}
+
+.hero--clay {
+  background: linear-gradient(135deg, #A0522D 0%, #7B3F22 40%, #4E2814 100%);
+
+  .particle { background: rgba(205, 133, 63, 0.4); }
+}
+
+.hero--classes {
+  background: linear-gradient(135deg, #8B6914 0%, #C75B39 50%, #4A6741 100%);
+
+  .particle { background: rgba(255, 255, 255, 0.3); }
+}
+
+.hero--contact {
+  background: linear-gradient(135deg, #3D4A56 0%, #2C3A47 50%, #1A252F 100%);
+
+  .particle { background: rgba(168, 181, 194, 0.4); }
+}

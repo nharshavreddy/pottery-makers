@@ -1,0 +1,75 @@
+<div class="inquiry-form-wrapper" [class]="'theme-' + themeColor">
+  <div class="form-card" *ngIf="!showSuccess">
+    <div class="form-header">
+      <span class="material-symbols-outlined form-icon">
+        {{ formType === 'inquiry' ? 'shopping_bag' : 'school' }}
+      </span>
+      <h3>{{ formType === 'inquiry' ? 'Complete Your Inquiry' : 'Register for Pottery Class' }}</h3>
+      <p>{{ formType === 'inquiry' ? 'Fill in your details and we\'ll get back to you shortly' : 'Join our hands-on pottery experience' }}</p>
+    </div>
+
+    <form [formGroup]="inquiryForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <div class="input-wrapper">
+          <span class="material-symbols-outlined">person</span>
+          <input id="name" type="text" formControlName="name" placeholder="Enter your full name">
+        </div>
+        <span class="error" *ngIf="f['name'].touched && f['name'].errors?.['required']">Name is required</span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <div class="input-wrapper">
+          <span class="material-symbols-outlined">mail</span>
+          <input id="email" type="email" formControlName="email" placeholder="your@email.com">
+        </div>
+        <span class="error" *ngIf="f['email'].touched && f['email'].errors?.['email']">Please enter a valid email</span>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <div class="input-wrapper">
+          <span class="material-symbols-outlined">call</span>
+          <input id="phone" type="tel" formControlName="phone" placeholder="10-digit phone number">
+        </div>
+        <span class="error" *ngIf="f['phone'].touched && f['phone'].errors?.['pattern']">Enter a valid 10-digit number</span>
+      </div>
+
+      <div class="form-group" *ngIf="formType === 'class'">
+        <label for="preferredDate">Preferred Schedule Date</label>
+        <div class="input-wrapper">
+          <span class="material-symbols-outlined">calendar_month</span>
+          <input id="preferredDate" type="date" formControlName="preferredDate">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Additional Message (Optional)</label>
+        <div class="input-wrapper textarea-wrapper">
+          <span class="material-symbols-outlined">edit_note</span>
+          <textarea id="message" formControlName="message" rows="3" placeholder="Any specific requirements..."></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn" [class.submitting]="isSubmitting" [disabled]="isSubmitting">
+        <span class="material-symbols-outlined" *ngIf="!isSubmitting">send</span>
+        <span class="spinner" *ngIf="isSubmitting"></span>
+        {{ isSubmitting ? 'Sending...' : 'Send via WhatsApp' }}
+      </button>
+    </form>
+  </div>
+
+  <div class="success-card" *ngIf="showSuccess">
+    <div class="success-icon">
+      <span class="material-symbols-outlined">check_circle</span>
+    </div>
+    <h3>Thank You!</h3>
+    <p>
+      {{ formType === 'inquiry'
+        ? 'One of our experts will get in touch with you to proceed with your order.'
+        : 'One of our experts will get in touch with you regarding your class registration.' }}
+    </p>
+    <button class="btn btn-primary" (click)="closeSuccess()">Continue Browsing</button>
+  </div>
+</div>

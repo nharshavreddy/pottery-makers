@@ -1,0 +1,78 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-icon">
+            <span class="material-symbols-outlined">yard</span>
+          </div>
+          <div>
+            <h3>The Pottery Makers</h3>
+            <p class="tagline">Handcrafted with Love</p>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Crafting high-quality pots that blend tradition with modern design.
+          Terracotta, concrete, traditional, elite, and textured pots for every space.
+        </p>
+        <div class="social-links">
+          <a (click)="openWhatsApp()" class="social-btn whatsapp">
+            <span class="material-symbols-outlined">chat</span>
+          </a>
+          <a href="mailto:depotterymakers@gmail.com" class="social-btn email">
+            <span class="material-symbols-outlined">mail</span>
+          </a>
+          <a href="tel:+917396288015" class="social-btn phone">
+            <span class="material-symbols-outlined">call</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-nav">
+        <h4>Products</h4>
+        <ul>
+          <li><a routerLink="/terracotta">Terracotta</a></li>
+          <li><a routerLink="/concrete">Concrete Pots</a></li>
+          <li><a routerLink="/traditional">Traditional Pots</a></li>
+          <li><a routerLink="/elite">Elite Pots</a></li>
+          <li><a routerLink="/textured">Textured Pots</a></li>
+          <li><a routerLink="/landscaping">Landscaping</a></li>
+          <li><a routerLink="/raw-clay">Raw Clay</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav">
+        <h4>Company</h4>
+        <ul>
+          <li><a routerLink="/about">About Us</a></li>
+          <li><a routerLink="/pottery-classes">Pottery Classes</a></li>
+          <li><a routerLink="/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Get in Touch</h4>
+        <div class="contact-item">
+          <span class="material-symbols-outlined">call</span>
+          <div>
+            <a href="tel:+917013689742">+91 7013 689 742</a>
+            <a href="tel:+917396288015">+91 7396 288 015</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="material-symbols-outlined">mail</span>
+          <a href="mailto:depotterymakers@gmail.com">depotterymakers&#64;gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="material-symbols-outlined">language</span>
+          <a href="https://www.potterymakers.com" target="_blank">www.potterymakers.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ currentYear }} The Pottery Makers. All rights reserved.</p>
+      <p class="made-with">Made with <span class="heart">&hearts;</span> for art lovers</p>
+    </div>
+  </div>
+</footer>

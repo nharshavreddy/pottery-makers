@@ -1,0 +1,43 @@
+<app-hero
+  title="Concrete Pots"
+  subtitle="Modern minimalist designs crafted with premium concrete. Industrial elegance meets botanical beauty."
+  backgroundClass="concrete"
+  [compact]="true">
+</app-hero>
+
+<section class="products-section section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Our Collection</span>
+      <h2 class="section-title">Concrete Series</h2>
+      <p class="section-subtitle">
+        Discover our range of handcrafted concrete planters — from sleek cylinders to bold statement pieces
+      </p>
+    </div>
+
+    <div class="products-grid">
+      <app-product-card
+        *ngFor="let product of products"
+        [product]="product"
+        [themeColor]="'concrete'"
+        (addToInquiry)="addToInquiry($event)">
+      </app-product-card>
+    </div>
+
+    <div class="inquiry-cta" *ngIf="!showInquiryForm">
+      <button class="btn btn-primary" (click)="toggleInquiryForm()">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        Complete Your Inquiry
+      </button>
+      <p class="cta-note">Select products above, then fill the form to send us your inquiry</p>
+    </div>
+
+    <div class="inquiry-section" *ngIf="showInquiryForm">
+      <app-inquiry-form
+        formType="inquiry"
+        themeColor="concrete"
+        (formSubmitted)="onFormSubmitted()">
+      </app-inquiry-form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,39 @@
+<app-hero
+  title="Traditional Pots"
+  subtitle="Classic designs preserving centuries of pottery heritage. Each piece honors the timeless beauty of Indian craftsmanship."
+  backgroundClass="traditional"
+  [compact]="true">
+</app-hero>
+
+<section class="products-section section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Heritage Collection</span>
+      <h2 class="section-title">Traditional Artistry</h2>
+      <p class="section-subtitle">
+        Classic forms perfected over generations, bringing warmth and cultural richness to every space
+      </p>
+    </div>
+
+    <div class="products-grid">
+      <app-product-card
+        *ngFor="let product of products"
+        [product]="product"
+        [themeColor]="'traditional'"
+        (addToInquiry)="addToInquiry($event)">
+      </app-product-card>
+    </div>
+
+    <div class="inquiry-cta" *ngIf="!showInquiryForm">
+      <button class="btn btn-primary" (click)="toggleInquiryForm()">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        Send Inquiry
+      </button>
+      <p class="cta-note">Contact us for pricing and availability</p>
+    </div>
+
+    <div class="inquiry-section" *ngIf="showInquiryForm">
+      <app-inquiry-form formType="inquiry" themeColor="traditional" (formSubmitted)="onFormSubmitted()"></app-inquiry-form>
+    </div>
+  </div>
+</section>
