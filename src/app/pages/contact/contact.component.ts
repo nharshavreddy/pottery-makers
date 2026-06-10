@@ -12,7 +12,15 @@ export class ContactComponent {
   showSuccess = false;
   whatsappNumber = '917396288015';
 
-  contactInfo = [
+  locationMapUrl = 'https://share.google/7scHC4ceSY9RgS8Tb';
+
+  contactInfo: { icon: string; label: string; values: string[]; link?: string }[] = [
+    {
+      icon: 'location_on',
+      label: 'Location',
+      values: ['PotSmith Artizians Private Limited', 'Hyderabad, Telangana'],
+      link: this.locationMapUrl
+    },
     { icon: 'call', label: 'Phone', values: ['+91 7013 689 742', '+91 7396 288 015'] },
     { icon: 'chat', label: 'WhatsApp Business', values: ['+91 7396 288 015'] },
     { icon: 'mail', label: 'Email', values: ['depotterymakers@gmail.com'] },

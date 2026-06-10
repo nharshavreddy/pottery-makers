@@ -74,9 +74,9 @@ export class HomeComponent {
   ];
 
   features = [
-    { icon: 'verified', title: 'Handcrafted Quality', desc: 'Each piece is carefully made by skilled artisans' },
-    { icon: 'local_shipping', title: 'Safe Delivery', desc: 'Secure packaging and reliable shipping across India' },
-    { icon: 'support_agent', title: 'Expert Guidance', desc: 'Personal consultation for your perfect selection' },
-    { icon: 'eco', title: 'Eco-Friendly', desc: 'Sustainable materials and traditional techniques' }
+    { icon: 'factory', title: 'Largest in Hyderabad', desc: 'One of the largest clay pot manufacturers in the region' },
+    { icon: 'palette', title: 'Handcrafted & Custom', desc: 'Customizable designs crafted by skilled artisans' },
+    { icon: 'storefront', title: 'Direct Factory Supply', desc: 'Buy directly from the manufacturer — no middlemen' },
+    { icon: 'local_shipping', title: 'In-House Transport', desc: 'Safe delivery through our own transport vehicles' }
   ];
 }

@@ -6,17 +6,34 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-  values = [
-    { icon: 'palette', title: 'Craftsmanship', desc: 'Every piece is hand-made with meticulous attention to detail and quality' },
-    { icon: 'eco', title: 'Sustainability', desc: 'We use eco-friendly materials and traditional firing techniques' },
-    { icon: 'handshake', title: 'Personalized Service', desc: 'We work closely with each customer to find their perfect pieces' },
-    { icon: 'history', title: 'Heritage', desc: 'Preserving centuries-old pottery traditions while embracing modern design' }
+  whyChoose = [
+    { icon: 'factory', title: 'Largest in Hyderabad', desc: 'One of the largest clay pot manufacturers in Hyderabad' },
+    { icon: 'palette', title: 'Handcrafted & Customizable', desc: 'Handcrafted designs tailored to your space and vision' },
+    { icon: 'storefront', title: 'Direct Factory Supply', desc: 'No middlemen — buy directly from the manufacturer' },
+    { icon: 'local_shipping', title: 'In-House Transport', desc: 'Safe delivery through our own transport vehicles' },
+    { icon: 'auto_awesome', title: 'Tradition Meets Modern', desc: 'A blend of traditional craftsmanship and modern aesthetics' }
   ];
 
-  milestones = [
-    { year: 'Foundation', desc: 'Started with a passion for traditional pottery' },
-    { year: 'Growth', desc: 'Expanded into concrete and designer collections' },
-    { year: 'Community', desc: 'Launched pottery classes and workshops' },
-    { year: 'Today', desc: '200+ designs across 7 categories' }
+  partnerTypes = [
+    'Interior Designers',
+    'Architects',
+    'Builders & Developers',
+    'Retail Stores',
+    'Landscaping Companies'
+  ];
+
+  partnerBenefits = [
+    'Wholesale and bulk pricing for trade partners',
+    'Custom and bespoke design capabilities',
+    'Direct factory supply with no middlemen',
+    'Reliable in-house delivery for large orders',
+    'Dedicated support for project-based requirements'
+  ];
+
+  credentials = [
+    { label: 'Corporate Identification Number (CIN)', value: 'U23931TS2025PTC196830' },
+    { label: 'GST Registration Number', value: '36AAPCP6456K1ZO' },
+    { label: 'Tax Deduction Account Number (TAN)', value: 'HYDP22224G' },
+    { label: 'MSME Registration Number', value: 'UDYAM-TS-02-034383' }
   ];
 }

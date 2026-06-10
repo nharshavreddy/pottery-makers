@@ -7,13 +7,13 @@
             <span class="material-symbols-outlined">yard</span>
           </div>
           <div>
-            <h3>The Pottery Makers</h3>
-            <p class="tagline">Handcrafted with Love</p>
+            <h3>PotSmith</h3>
+            <p class="tagline">Artizians Private Limited</p>
           </div>
         </div>
         <p class="footer-desc">
-          Crafting high-quality pots that blend tradition with modern design.
-          Terracotta, concrete, traditional, elite, and textured pots for every space.
+          Handcrafted pottery and planters promoting eco-friendly living.
+          Premium-quality pots, planters, and bespoke clay art for every space.
         </p>
         <div class="social-links">
           <a (click)="openWhatsApp()" class="social-btn whatsapp">
@@ -50,8 +50,24 @@
         </ul>
       </div>
 
+      <div class="footer-nav">
+        <h4>Policies</h4>
+        <ul>
+          <li><a routerLink="/policies" fragment="shipping">Shipping Policy</a></li>
+          <li><a routerLink="/policies" fragment="terms">Terms & Conditions</a></li>
+          <li><a routerLink="/policies" fragment="privacy">Privacy Policy</a></li>
+        </ul>
+      </div>
+
       <div class="footer-contact">
         <h4>Get in Touch</h4>
+        <div class="contact-item">
+          <span class="material-symbols-outlined">location_on</span>
+          <div>
+            <span>PotSmith Artizians Private Limited</span>
+            <span>Hyderabad, Telangana</span>
+          </div>
+        </div>
         <div class="contact-item">
           <span class="material-symbols-outlined">call</span>
           <div>
@@ -71,7 +87,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; {{ currentYear }} The Pottery Makers. All rights reserved.</p>
+      <p>&copy; {{ currentYear }} PotSmith Artizians Private Limited. All rights reserved.</p>
       <p class="made-with">Made with <span class="heart">&hearts;</span> for art lovers</p>
     </div>
   </div>

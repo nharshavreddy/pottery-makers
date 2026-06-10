@@ -1,6 +1,6 @@
 <app-hero
   title="About Us"
-  subtitle="The story of passion, tradition, and modern craftsmanship"
+  subtitle="Redefining spaces through the timeless beauty of handcrafted pottery"
   backgroundClass="default"
   [compact]="true">
 </app-hero>
@@ -10,22 +10,23 @@
     <div class="about-intro">
       <div class="intro-content">
         <span class="section-tag">Our Story</span>
-        <h2 class="section-title">Crafting Beauty,<br>Preserving Tradition</h2>
+        <h2 class="section-title">PotSmith Artizians<br>Private Limited</h2>
         <p>
-          At The Pottery Makers, we specialize in crafting high-quality pots that blend
-          tradition with modern design. Our collection includes terracotta, concrete,
-          traditional, elite, and textured pots, carefully designed to enhance both
-          indoor and outdoor spaces.
+          PotSmith Artizians Private Limited was founded by Prashanth Kumar Ramancol and
+          Praveen Kumar Thurupu with a shared vision: to redefine spaces through the timeless
+          beauty of handcrafted pottery and artistic planters.
         </p>
         <p>
-          With a strong focus on craftsmanship and authenticity, we also offer landscaping
-          solutions and pottery classes for those who wish to explore the art of pottery.
-          Our goal is to deliver durable, aesthetically pleasing products while preserving
-          the beauty of traditional techniques.
+          Born out of a deep passion for clay artistry and sustainable living, PotSmith
+          specializes in manufacturing premium-quality pots, planters, and bespoke clay art
+          pieces. Today, we are proud to stand as one of the largest manufacturers in the
+          Hyderabad region, catering to homes, corporate offices, commercial spaces, and
+          large-scale landscaping projects.
         </p>
         <p>
-          We are committed to providing personalized service, ensuring that every customer
-          finds the perfect pieces to suit their needs.
+          We believe that every environment can be transformed by the warmth and elegance of
+          clay. Our creations harmoniously blend rich tradition, meticulous craftsmanship, and
+          contemporary design to bring your spaces to life.
         </p>
       </div>
       <div class="intro-image">
@@ -35,31 +36,83 @@
       </div>
     </div>
 
-    <div class="values-section">
-      <h2 class="section-title centered">Our Values</h2>
-      <div class="values-grid">
-        <div class="value-card" *ngFor="let val of values">
-          <div class="value-icon">
-            <span class="material-symbols-outlined">{{ val.icon }}</span>
+    <div class="vision-philosophy-grid">
+      <div class="content-card">
+        <span class="section-tag">Our Vision</span>
+        <h3 class="card-title">Leading Handcrafted Pottery</h3>
+        <p>
+          To become a leading name in handcrafted pottery and planters, promoting eco-friendly
+          living while enhancing spaces with artistic excellence.
+        </p>
+      </div>
+      <div class="content-card">
+        <span class="section-tag">Our Philosophy</span>
+        <h3 class="card-title">A Touch of Clay</h3>
+        <p>A touch of clay can transform any space.</p>
+        <p>
+          Our products are designed to create a perfect harmony between nature and modern
+          living.
+        </p>
+        <p>
+          Whether it's a home, office, or retail space, our planters and clay art add life,
+          beauty, and character effortlessly.
+        </p>
+      </div>
+    </div>
+
+    <div class="why-section">
+      <h2 class="section-title centered">Why Choose PotSmith</h2>
+      <div class="why-grid">
+        <div class="why-card" *ngFor="let item of whyChoose">
+          <div class="why-icon">
+            <span class="material-symbols-outlined">{{ item.icon }}</span>
           </div>
-          <h4>{{ val.title }}</h4>
-          <p>{{ val.desc }}</p>
+          <h4>{{ item.title }}</h4>
+          <p>{{ item.desc }}</p>
         </div>
       </div>
     </div>
 
-    <div class="journey-section">
-      <h2 class="section-title centered">Our Journey</h2>
-      <div class="timeline">
-        <div class="timeline-item" *ngFor="let milestone of milestones; let i = index">
-          <div class="timeline-marker">
-            <div class="marker-dot"></div>
-          </div>
-          <div class="timeline-content">
-            <span class="timeline-year">{{ milestone.year }}</span>
-            <p>{{ milestone.desc }}</p>
-          </div>
+    <div class="credentials-section">
+      <h2 class="section-title centered">Corporate Credibility & Certifications</h2>
+      <p class="credentials-intro centered">
+        We operate with absolute transparency, professionalism, and adherence to regulatory
+        standards. PotSmith Artizians Private Limited is a legally certified entity recognized
+        by the Ministry of Corporate Affairs and various government bodies under the following
+        credentials:
+      </p>
+      <div class="credentials-grid">
+        <div class="credential-card" *ngFor="let cred of credentials">
+          <span class="cred-label">{{ cred.label }}</span>
+          <span class="cred-value">{{ cred.value }}</span>
         </div>
+      </div>
+    </div>
+
+    <div class="partner-section">
+      <div class="partner-content">
+        <span class="section-tag">Partner With Us</span>
+        <h2 class="section-title">Collaborate With PotSmith</h2>
+        <p class="partner-intro">We welcome collaborations with:</p>
+        <ul class="partner-list">
+          <li *ngFor="let type of partnerTypes">
+            <span class="material-symbols-outlined">check_circle</span>
+            {{ type }}
+          </li>
+        </ul>
+      </div>
+      <div class="partner-benefits">
+        <h4>Partnering with PotSmith means access to:</h4>
+        <ul>
+          <li *ngFor="let benefit of partnerBenefits">
+            <span class="material-symbols-outlined">arrow_forward</span>
+            {{ benefit }}
+          </li>
+        </ul>
+        <a routerLink="/contact" class="btn btn-primary partner-cta">
+          Get in Touch
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
       </div>
     </div>
   </div>

@@ -76,6 +76,28 @@
     color: var(--text-dark);
     font-weight: 500;
   }
+
+  .info-link:hover {
+    color: var(--primary-terracotta);
+  }
+
+  .map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-terracotta);
+
+    .material-symbols-outlined {
+      font-size: 18px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .quick-connect {

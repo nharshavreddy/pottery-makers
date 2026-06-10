@@ -11,6 +11,7 @@ import { RawClayComponent } from './pages/raw-clay/raw-clay.component';
 import { PotteryClassesComponent } from './pages/pottery-classes/pottery-classes.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { PoliciesComponent } from './pages/policies/policies.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'pottery-classes', component: PotteryClassesComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'policies', component: PoliciesComponent },
   { path: '**', redirectTo: '' }
 ];
 

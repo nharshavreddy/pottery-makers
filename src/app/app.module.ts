@@ -21,6 +21,7 @@ import { RawClayComponent } from './pages/raw-clay/raw-clay.component';
 import { PotteryClassesComponent } from './pages/pottery-classes/pottery-classes.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { PoliciesComponent } from './pages/policies/policies.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     RawClayComponent,
     PotteryClassesComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    PoliciesComponent
   ],
   imports: [
     BrowserModule,
