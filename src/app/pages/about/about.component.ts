@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-about',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
+  companyName = environment.companyName;
   whyChoose = [
     { icon: 'factory', title: 'Largest in Hyderabad', desc: 'One of the largest clay pot manufacturers in Hyderabad' },
     { icon: 'palette', title: 'Handcrafted & Customizable', desc: 'Handcrafted designs tailored to your space and vision' },

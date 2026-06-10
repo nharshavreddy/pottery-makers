@@ -22,16 +22,19 @@
             </div>
             <div class="info-content">
               <span class="info-label">{{ info.label }}</span>
-              <ng-container *ngIf="info.link; else plainValues">
-                <a *ngFor="let val of info.values" [href]="info.link" target="_blank" class="info-value info-link">{{ val }}</a>
+              <ng-container *ngIf="info.isLocation">
+                <a [href]="info.link" target="_blank" class="info-value info-link">
+                  <strong class="company-name">{{ companyName }}</strong>
+                </a>
+                <a [href]="info.link" target="_blank" class="info-value info-link">{{ info.city }}</a>
                 <a [href]="info.link" target="_blank" class="map-link">
                   <span class="material-symbols-outlined">map</span>
                   View on Map
                 </a>
               </ng-container>
-              <ng-template #plainValues>
+              <ng-container *ngIf="!info.isLocation">
                 <a *ngFor="let val of info.values" class="info-value">{{ val }}</a>
-              </ng-template>
+              </ng-container>
             </div>
           </div>
         </div>

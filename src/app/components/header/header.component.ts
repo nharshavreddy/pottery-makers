@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from '../../services/cart.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,7 @@ import { CartService } from '../../services/cart.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  companyName = environment.companyName;
   isScrolled = false;
   isMobileMenuOpen = false;
   cartItemCount = 0;

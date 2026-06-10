@@ -10,14 +10,15 @@
     <div class="about-intro">
       <div class="intro-content">
         <span class="section-tag">Our Story</span>
-        <h2 class="section-title">PotSmith Artizians<br>Private Limited</h2>
+        <h2 class="section-title"><strong class="company-name">{{ companyName }}</strong></h2>
         <p>
-          PotSmith Artizians Private Limited was founded by Prashanth Kumar Ramancol and
+          <strong class="company-name">{{ companyName }}</strong> was founded by Prashanth Kumar Ramancol and
           Praveen Kumar Thurupu with a shared vision: to redefine spaces through the timeless
           beauty of handcrafted pottery and artistic planters.
         </p>
         <p>
-          Born out of a deep passion for clay artistry and sustainable living, PotSmith
+          Born out of a deep passion for clay artistry and sustainable living,
+          <strong class="company-name">{{ companyName }}</strong>
           specializes in manufacturing premium-quality pots, planters, and bespoke clay art
           pieces. Today, we are proud to stand as one of the largest manufacturers in the
           Hyderabad region, catering to homes, corporate offices, commercial spaces, and
@@ -61,7 +62,7 @@
     </div>
 
     <div class="why-section">
-      <h2 class="section-title centered">Why Choose PotSmith</h2>
+      <h2 class="section-title centered">Why Choose <strong class="company-name">{{ companyName }}</strong></h2>
       <div class="why-grid">
         <div class="why-card" *ngFor="let item of whyChoose">
           <div class="why-icon">
@@ -77,7 +78,7 @@
       <h2 class="section-title centered">Corporate Credibility & Certifications</h2>
       <p class="credentials-intro centered">
         We operate with absolute transparency, professionalism, and adherence to regulatory
-        standards. PotSmith Artizians Private Limited is a legally certified entity recognized
+        standards. <strong class="company-name">{{ companyName }}</strong> is a legally certified entity recognized
         by the Ministry of Corporate Affairs and various government bodies under the following
         credentials:
       </p>
@@ -92,7 +93,7 @@
     <div class="partner-section">
       <div class="partner-content">
         <span class="section-tag">Partner With Us</span>
-        <h2 class="section-title">Collaborate With PotSmith</h2>
+        <h2 class="section-title">Collaborate With <strong class="company-name">{{ companyName }}</strong></h2>
         <p class="partner-intro">We welcome collaborations with:</p>
         <ul class="partner-list">
           <li *ngFor="let type of partnerTypes">
@@ -102,7 +103,7 @@
         </ul>
       </div>
       <div class="partner-benefits">
-        <h4>Partnering with PotSmith means access to:</h4>
+        <h4>Partnering with <strong class="company-name">{{ companyName }}</strong> means access to:</h4>
         <ul>
           <li *ngFor="let benefit of partnerBenefits">
             <span class="material-symbols-outlined">arrow_forward</span>

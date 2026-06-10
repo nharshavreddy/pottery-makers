@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -7,6 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  companyName = environment.companyName;
   contactForm: FormGroup;
   isSubmitting = false;
   showSuccess = false;
@@ -14,11 +16,12 @@ export class ContactComponent {
 
   locationMapUrl = 'https://share.google/7scHC4ceSY9RgS8Tb';
 
-  contactInfo: { icon: string; label: string; values: string[]; link?: string }[] = [
+  contactInfo: { icon: string; label: string; values?: string[]; link?: string; isLocation?: boolean; city?: string }[] = [
     {
       icon: 'location_on',
       label: 'Location',
-      values: ['PotSmith Artizians Private Limited', 'Hyderabad, Telangana'],
+      isLocation: true,
+      city: 'Hyderabad, Telangana',
       link: this.locationMapUrl
     },
     { icon: 'call', label: 'Phone', values: ['+91 7013 689 742', '+91 7396 288 015'] },
